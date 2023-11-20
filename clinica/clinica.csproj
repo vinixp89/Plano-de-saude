@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <Folder Include="Dominio\" />
+    <Folder Include="Entidades\Enum\" />
     <Folder Include="Repositorio\" />
   </ItemGroup>
 

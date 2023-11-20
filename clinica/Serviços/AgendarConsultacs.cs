@@ -1,4 +1,6 @@
-﻿namespace clinica.Serviços
+﻿using clinica.Entidades.Exception;
+
+namespace clinica.Serviços
 {
     public class AgendarConsultacs
     {
@@ -16,12 +18,20 @@
             data = dataConsulta;
 
 
-            if ( paciente != null || dataConsulta != null) 
-            
-            {
-                Console.WriteLine("digite um nome ou data válido");
+            try
 
-                
+            {
+                if (paciente != null || dataConsulta != null);
+
+            }
+            catch (ArithmeticException e)
+            {
+               throw new DomainException ("Valor invalido" + e.Message);
+
+            }
+            catch (FormatException e)
+            {
+              throw new DomainException("Formato de entrada invalido" + e.Message);
 
             }
         }
